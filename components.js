@@ -18,7 +18,7 @@ export class BeerListContainer extends Component {
     render() {
         return (
             <div>
-                <InputArea/>
+                <InputArea onSubmit={this.addItem}/>
                 <BeerList/>
             </div>
         )
@@ -30,6 +30,9 @@ export class InputArea extends Component {
         return <Input/>
     }
 }
+InputArea.propTypes = {
+    onSubmit: React.PropTypes.func.isRequired
+};
 
 export class BeerList extends Component {
     render() {
