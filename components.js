@@ -21,9 +21,9 @@ export class BeerListContainer extends Component {
         return (
             <div>
                 <InputArea onSubmit={this.addItem}/>
-                <BeerList/>
+                <BeerList items={this.state.beers}/>
             </div>
-        )
+        );
     }
 }
 
@@ -44,7 +44,9 @@ export class InputArea extends Component {
     }
 
     handleClick() {
+        if (this.state.text == '') return;
         this.props.onSubmit(this.state.text);
+        this.state.text = '';
     }
 
     render() {
