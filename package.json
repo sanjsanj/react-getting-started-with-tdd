@@ -22,7 +22,8 @@
     "sinon": "^2.1.0"
   },
   "scripts": {
-    "test": "mocha --watch --require setup.js *.spec.js"
+    "test": "mocha --watch --require setup.js *.spec.js",
+    "start": "quik"
   },
   "repository": {
     "type": "git",
